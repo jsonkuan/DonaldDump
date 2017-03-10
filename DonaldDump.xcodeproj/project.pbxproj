@@ -7,14 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1AB72547AF83F51AC9275C2F /* Pods_DonaldDump.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7056A210827CA9805C1D4AD /* Pods_DonaldDump.framework */; };
+		3EC251E7F259D1BCFBBBC15F /* Pods_DonaldDumpNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D12B6EEED191EE405638C9 /* Pods_DonaldDumpNotificationServiceExtension.framework */; };
 		9C804D4A1E72FA650031EFEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C804D491E72FA650031EFEF /* AppDelegate.swift */; };
 		9C804D4C1E72FA650031EFEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C804D4B1E72FA650031EFEF /* ViewController.swift */; };
 		9C804D4F1E72FA650031EFEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C804D4D1E72FA650031EFEF /* Main.storyboard */; };
 		9C804D511E72FA650031EFEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C804D501E72FA650031EFEF /* Assets.xcassets */; };
 		9C804D541E72FA650031EFEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C804D521E72FA650031EFEF /* LaunchScreen.storyboard */; };
+		9C804D631E7300EA0031EFEF /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C804D621E7300EA0031EFEF /* NotificationService.swift */; };
+		9C804D671E7300EA0031EFEF /* DonaldDumpNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9C804D601E7300EA0031EFEF /* DonaldDumpNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		9C804D651E7300EA0031EFEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C804D3E1E72FA650031EFEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C804D5F1E7300EA0031EFEF;
+			remoteInfo = DonaldDumpNotificationServiceExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9C804D6B1E7300EA0031EFEF /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9C804D671E7300EA0031EFEF /* DonaldDumpNotificationServiceExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		197698926AD1FE8CEF4E9D8A /* Pods-DonaldDump.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DonaldDump.release.xcconfig"; path = "Pods/Target Support Files/Pods-DonaldDump/Pods-DonaldDump.release.xcconfig"; sourceTree = "<group>"; };
+		43D12B6EEED191EE405638C9 /* Pods_DonaldDumpNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DonaldDumpNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65FD6AFE88EDD6A11CE218FC /* Pods-DonaldDump.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DonaldDump.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DonaldDump/Pods-DonaldDump.debug.xcconfig"; sourceTree = "<group>"; };
+		6A9628FC82D7615A07C7E6C5 /* Pods-DonaldDumpNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DonaldDumpNotificationServiceExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DonaldDumpNotificationServiceExtension/Pods-DonaldDumpNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		78D4FCFB94C92DF9C38648BA /* Pods-DonaldDumpNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DonaldDumpNotificationServiceExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-DonaldDumpNotificationServiceExtension/Pods-DonaldDumpNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 		9C804D461E72FA650031EFEF /* DonaldDump.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DonaldDump.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C804D491E72FA650031EFEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C804D4B1E72FA650031EFEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +55,11 @@
 		9C804D501E72FA650031EFEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C804D531E72FA650031EFEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C804D551E72FA650031EFEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C804D5B1E72FE980031EFEF /* DonaldDump.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DonaldDump.entitlements; sourceTree = "<group>"; };
+		9C804D601E7300EA0031EFEF /* DonaldDumpNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DonaldDumpNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C804D621E7300EA0031EFEF /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		9C804D641E7300EA0031EFEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7056A210827CA9805C1D4AD /* Pods_DonaldDump.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DonaldDump.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +67,49 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AB72547AF83F51AC9275C2F /* Pods_DonaldDump.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C804D5D1E7300EA0031EFEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EC251E7F259D1BCFBBBC15F /* Pods_DonaldDumpNotificationServiceExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21E6DCF716AA9F4CBA6F623C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D7056A210827CA9805C1D4AD /* Pods_DonaldDump.framework */,
+				43D12B6EEED191EE405638C9 /* Pods_DonaldDumpNotificationServiceExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		72BC10FF09BE61808D57AC41 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				65FD6AFE88EDD6A11CE218FC /* Pods-DonaldDump.debug.xcconfig */,
+				197698926AD1FE8CEF4E9D8A /* Pods-DonaldDump.release.xcconfig */,
+				6A9628FC82D7615A07C7E6C5 /* Pods-DonaldDumpNotificationServiceExtension.debug.xcconfig */,
+				78D4FCFB94C92DF9C38648BA /* Pods-DonaldDumpNotificationServiceExtension.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9C804D3D1E72FA650031EFEF = {
 			isa = PBXGroup;
 			children = (
 				9C804D481E72FA650031EFEF /* DonaldDump */,
+				9C804D611E7300EA0031EFEF /* DonaldDumpNotificationServiceExtension */,
 				9C804D471E72FA650031EFEF /* Products */,
+				72BC10FF09BE61808D57AC41 /* Pods */,
+				21E6DCF716AA9F4CBA6F623C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -47,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				9C804D461E72FA650031EFEF /* DonaldDump.app */,
+				9C804D601E7300EA0031EFEF /* DonaldDumpNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,6 +125,7 @@
 		9C804D481E72FA650031EFEF /* DonaldDump */ = {
 			isa = PBXGroup;
 			children = (
+				9C804D5B1E72FE980031EFEF /* DonaldDump.entitlements */,
 				9C804D491E72FA650031EFEF /* AppDelegate.swift */,
 				9C804D4B1E72FA650031EFEF /* ViewController.swift */,
 				9C804D4D1E72FA650031EFEF /* Main.storyboard */,
@@ -64,6 +136,15 @@
 			path = DonaldDump;
 			sourceTree = "<group>";
 		};
+		9C804D611E7300EA0031EFEF /* DonaldDumpNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				9C804D621E7300EA0031EFEF /* NotificationService.swift */,
+				9C804D641E7300EA0031EFEF /* Info.plist */,
+			);
+			path = DonaldDumpNotificationServiceExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,18 +152,42 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9C804D581E72FA650031EFEF /* Build configuration list for PBXNativeTarget "DonaldDump" */;
 			buildPhases = (
+				25E8300A091F37D4E7A7E88F /* [CP] Check Pods Manifest.lock */,
 				9C804D421E72FA650031EFEF /* Sources */,
 				9C804D431E72FA650031EFEF /* Frameworks */,
 				9C804D441E72FA650031EFEF /* Resources */,
+				9C804D6B1E7300EA0031EFEF /* Embed App Extensions */,
+				F45D9FEFF527FD9A5B3EBC04 /* [CP] Embed Pods Frameworks */,
+				2277D048A693121DC5D67DEC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9C804D661E7300EA0031EFEF /* PBXTargetDependency */,
 			);
 			name = DonaldDump;
 			productName = DonaldDump;
 			productReference = 9C804D461E72FA650031EFEF /* DonaldDump.app */;
 			productType = "com.apple.product-type.application";
+		};
+		9C804D5F1E7300EA0031EFEF /* DonaldDumpNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C804D681E7300EA0031EFEF /* Build configuration list for PBXNativeTarget "DonaldDumpNotificationServiceExtension" */;
+			buildPhases = (
+				7A25B99903B4E7E2262CA72F /* [CP] Check Pods Manifest.lock */,
+				9C804D5C1E7300EA0031EFEF /* Sources */,
+				9C804D5D1E7300EA0031EFEF /* Frameworks */,
+				9C804D5E1E7300EA0031EFEF /* Resources */,
+				6C5FCDCE2A1433B1C64AF381 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DonaldDumpNotificationServiceExtension;
+			productName = DonaldDumpNotificationServiceExtension;
+			productReference = 9C804D601E7300EA0031EFEF /* DonaldDumpNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -95,6 +200,19 @@
 				ORGANIZATIONNAME = jsonkuan;
 				TargetAttributes = {
 					9C804D451E72FA650031EFEF = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = M7X37PRA8F;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+					9C804D5F1E7300EA0031EFEF = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = M7X37PRA8F;
 						ProvisioningStyle = Automatic;
@@ -115,6 +233,7 @@
 			projectRoot = "";
 			targets = (
 				9C804D451E72FA650031EFEF /* DonaldDump */,
+				9C804D5F1E7300EA0031EFEF /* DonaldDumpNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -130,7 +249,92 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9C804D5E1E7300EA0031EFEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2277D048A693121DC5D67DEC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DonaldDump/Pods-DonaldDump-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		25E8300A091F37D4E7A7E88F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6C5FCDCE2A1433B1C64AF381 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DonaldDumpNotificationServiceExtension/Pods-DonaldDumpNotificationServiceExtension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A25B99903B4E7E2262CA72F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F45D9FEFF527FD9A5B3EBC04 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DonaldDump/Pods-DonaldDump-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9C804D421E72FA650031EFEF /* Sources */ = {
@@ -142,7 +346,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9C804D5C1E7300EA0031EFEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C804D631E7300EA0031EFEF /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9C804D661E7300EA0031EFEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C804D5F1E7300EA0031EFEF /* DonaldDumpNotificationServiceExtension */;
+			targetProxy = 9C804D651E7300EA0031EFEF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9C804D4D1E72FA650031EFEF /* Main.storyboard */ = {
@@ -257,8 +477,11 @@
 		};
 		9C804D591E72FA650031EFEF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65FD6AFE88EDD6A11CE218FC /* Pods-DonaldDump.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DonaldDump/DonaldDump.entitlements;
 				DEVELOPMENT_TEAM = M7X37PRA8F;
 				INFOPLIST_FILE = DonaldDump/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -270,13 +493,44 @@
 		};
 		9C804D5A1E72FA650031EFEF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 197698926AD1FE8CEF4E9D8A /* Pods-DonaldDump.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DonaldDump/DonaldDump.entitlements;
 				DEVELOPMENT_TEAM = M7X37PRA8F;
 				INFOPLIST_FILE = DonaldDump/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jsonkuan.DonaldDump;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		9C804D691E7300EA0031EFEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A9628FC82D7615A07C7E6C5 /* Pods-DonaldDumpNotificationServiceExtension.debug.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = M7X37PRA8F;
+				INFOPLIST_FILE = DonaldDumpNotificationServiceExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jsonkuan.DonaldDump.DonaldDumpNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		9C804D6A1E7300EA0031EFEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78D4FCFB94C92DF9C38648BA /* Pods-DonaldDumpNotificationServiceExtension.release.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = M7X37PRA8F;
+				INFOPLIST_FILE = DonaldDumpNotificationServiceExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jsonkuan.DonaldDump.DonaldDumpNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -298,6 +552,15 @@
 			buildConfigurations = (
 				9C804D591E72FA650031EFEF /* Debug */,
 				9C804D5A1E72FA650031EFEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C804D681E7300EA0031EFEF /* Build configuration list for PBXNativeTarget "DonaldDumpNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C804D691E7300EA0031EFEF /* Debug */,
+				9C804D6A1E7300EA0031EFEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

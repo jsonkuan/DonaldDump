@@ -9,10 +9,20 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>DonaldDumpNotificationServiceExtension.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>9C804D451E72FA650031EFEF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9C804D5F1E7300EA0031EFEF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
