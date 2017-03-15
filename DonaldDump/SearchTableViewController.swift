@@ -7,45 +7,60 @@
 //
 
 import UIKit
+import OneSignal
 
-class SearchTableViewController: UITableViewController {
+class SearchTableViewController: UITableViewController, UISearchResultsUpdating {
+
+    var searchController: UISearchController!
+    let dataStore = DataStore.sharedStore
+    var searchResult: [Quote] = []
+    let parser = JSONParser()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search by quote"
+        tableView.tableHeaderView = searchController.searchBar
+        definesPresentationContext = true
+        
+        tableView.reloadData()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        //        OneSignal.postNotification( ["contents": ["en": "\(dataStore.quotesArray[0].phrase)"], "include_player_ids": [MY_PLAYER_ID]])
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    var shouldUseSearchResult: Bool {
+        if let text = searchController.searchBar.text {
+            if text.isEmpty {
+                return false
+            }
+        }
+        return searchController.isActive
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return dataStore.tagsArray.count //(shouldUseSearchResult ? searchResult : dataStore.tagsArray).count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+       
+        cell.textLabel?.text = dataStore.tagsArray[indexPath.row].label
 
         return cell
     }
-    */
+    
+    func updateSearchResults(for searchController: UISearchController) {
+
+    }
 
     /*
     // Override to support conditional editing of the table view.
