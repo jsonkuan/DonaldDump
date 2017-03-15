@@ -24,7 +24,7 @@ class RandomQuoteViewController: UIViewController {
         let parser = JSONParser()
         parser.loadRandomQuote()
         
-        quoteLabel.text = "'' " + dataStore.quotesArray[0].phrase + " ''"
+        quoteLabel.text = "'' " + dataStore.quotesArray[0].phrase + " ''" + "\n\n" + dataStore.quotesArray[0].date
     }
  
     /*

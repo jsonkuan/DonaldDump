@@ -10,7 +10,9 @@ import UIKit
 
 class Quote: NSObject {
     let phrase: String
-    init(phrase: String) {
+    let date: String
+    init(phrase: String, date: String) {
         self.phrase = phrase
+        self.date = date 
     }
 }

@@ -16,6 +16,49 @@ enum SerializationError: Error {
 class JSONParser: NSObject {
     
     let dataStore = DataStore.sharedStore
+    var tempData: [Quote] = []
+    
+    func loadQuoteForTag(tag: String) {
+   
+        self.dataStore.tagRelatedQuotes = []
+        
+        let url = "https://api.tronalddump.io/search/quote?query=\(tag)"
+        if let safeUrlString = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+            let url = URL(string: safeUrlString) {
+            let request = URLRequest(url: url)
+            let task = URLSession.shared.dataTask(with: request) {
+                (maybeData: Data?, response: URLResponse?, error: Error?) in
+                if let actualData = maybeData {
+                    let jsonOptions = JSONSerialization.ReadingOptions()
+                    do {
+                        if let json = try JSONSerialization.jsonObject(with: actualData, options: jsonOptions) as? [String:Any] {
+                            DispatchQueue.main.async {
+                                if let container = json["_embedded"] as? [String: Any],
+                                    let dictionaries = container["quotes"] as? [[String: Any]] {
+                                    for dictionary in dictionaries {
+                                        if let value = dictionary["value"] as? String,
+                                            let date = dictionary["appeared_at"] as? String {
+                                            let endIndex = date.index(date.endIndex, offsetBy: -9)
+                                            self.dataStore.tagRelatedQuotes.append(Quote(phrase: value, date: date.substring(to: endIndex)))
+                                        }
+                                    }
+                                }
+                            }
+                        } else {
+                            throw SerializationError.invalid("Failed to cast from json.")
+                        }
+                    } catch let parseError {
+                        NSLog("Failed to parse json: \(parseError).")
+                    }
+                } else {
+                    NSLog("No data received.")
+                }
+            }
+            task.resume()
+        } else {
+            NSLog("Failed to create url.")
+        }
+    }
     
     func loadTags() {
         let url = "https://api.tronalddump.io/tags"
@@ -63,8 +106,14 @@ class JSONParser: NSObject {
                     do {
                         if let json = try JSONSerialization.jsonObject(with: actualData, options: jsonOptions) as? [String:Any] {
                             DispatchQueue.main.async {
-                                if let quotes = json["value"] as? String {
-                                    self.dataStore.quotesArray.append(Quote(phrase: quotes))
+                                if let quotes = json["value"] as? String,
+                                    let date = json["appeared_at"] as? String {
+                                    
+                                    var data: [Quote] = []
+                                    let endIndex = date.index(date.endIndex, offsetBy: -9)
+                                    data.append(Quote(phrase: quotes, date: date.substring(to: endIndex)))
+                                    self.dataStore.quotesArray = data
+                                    self.dataStore.quotesArray = data
                                 }
                             }
                         } else {
@@ -83,3 +132,4 @@ class JSONParser: NSObject {
         }
     }
 }
+
