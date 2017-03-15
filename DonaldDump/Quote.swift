@@ -9,5 +9,8 @@
 import UIKit
 
 class Quote: NSObject {
-
+    let phrase: String
+    init(phrase: String) {
+        self.phrase = phrase
+    }
 }

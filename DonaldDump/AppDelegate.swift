@@ -17,7 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        OneSignal.initWithLaunchOptions(launchOptions, appId: "9955b37b-98d3-466e-bac2-604e5fae4780")
+        OneSignal.initWithLaunchOptions(launchOptions, appId: MY_APP_ID)
+        
         return true
     }
 
@@ -42,7 +43,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
 

@@ -15,5 +15,5 @@ class DataStore: NSObject {
     }()
     
     var quotesArray: [Quote] = []
-    var tagsArray: [String] = []
+    var tagsArray: [Tag] = []
 }

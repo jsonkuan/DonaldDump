@@ -9,5 +9,8 @@
 import UIKit
 
 class Tag: NSObject {
-
+    let label: String
+    init(label: String) {
+        self.label = label
+    }
 }
