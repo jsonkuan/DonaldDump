@@ -10,18 +10,23 @@ import UIKit
 
 class RandomQuoteViewController: UIViewController {
 
+    @IBOutlet weak var quoteLabel: UILabel!
+    var dataStore = DataStore.sharedStore
+    let parser = JSONParser()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        parser.loadRandomQuote()
+        parser.loadTags()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func getRandomQuote(_ sender: UIButton) {
+        let parser = JSONParser()
+        parser.loadRandomQuote()
+        
+        quoteLabel.text = "'' " + dataStore.quotesArray[0].phrase + " ''"
     }
-    
-
+ 
     /*
     // MARK: - Navigation
 
