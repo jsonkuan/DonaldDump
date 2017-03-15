@@ -24,6 +24,7 @@
 		9CEF41371E7701E60057BD38 /* CustomNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEF41361E7701E60057BD38 /* CustomNotification.swift */; };
 		9CEF41391E7984200057BD38 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEF41381E7984200057BD38 /* Tag.swift */; };
 		9CEF413B1E79875D0057BD38 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEF413A1E79875D0057BD38 /* config.swift */; };
+		9CEF413D1E799CDC0057BD38 /* DisplayResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEF413C1E799CDC0057BD38 /* DisplayResultsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		9CEF41361E7701E60057BD38 /* CustomNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNotification.swift; sourceTree = "<group>"; };
 		9CEF41381E7984200057BD38 /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		9CEF413A1E79875D0057BD38 /* config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
+		9CEF413C1E799CDC0057BD38 /* DisplayResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayResultsTableViewController.swift; sourceTree = "<group>"; };
 		D7056A210827CA9805C1D4AD /* Pods_DonaldDump.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DonaldDump.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -167,8 +169,9 @@
 		9C804D701E76A7020031EFEF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				9C804D6C1E7323450031EFEF /* SearchTableViewController.swift */,
 				9CEF41341E76CE1E0057BD38 /* RandomQuoteViewController.swift */,
+				9C804D6C1E7323450031EFEF /* SearchTableViewController.swift */,
+				9CEF413C1E799CDC0057BD38 /* DisplayResultsTableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				9CEF41371E7701E60057BD38 /* CustomNotification.swift in Sources */,
 				9CEF41391E7984200057BD38 /* Tag.swift in Sources */,
 				9C804D7A1E76B9BA0031EFEF /* DataStore.swift in Sources */,
+				9CEF413D1E799CDC0057BD38 /* DisplayResultsTableViewController.swift in Sources */,
 				9C804D781E76AE710031EFEF /* MyTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
