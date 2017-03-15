@@ -10,12 +10,20 @@
 		1AB72547AF83F51AC9275C2F /* Pods_DonaldDump.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7056A210827CA9805C1D4AD /* Pods_DonaldDump.framework */; };
 		3EC251E7F259D1BCFBBBC15F /* Pods_DonaldDumpNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D12B6EEED191EE405638C9 /* Pods_DonaldDumpNotificationServiceExtension.framework */; };
 		9C804D4A1E72FA650031EFEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C804D491E72FA650031EFEF /* AppDelegate.swift */; };
-		9C804D4C1E72FA650031EFEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C804D4B1E72FA650031EFEF /* ViewController.swift */; };
 		9C804D4F1E72FA650031EFEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C804D4D1E72FA650031EFEF /* Main.storyboard */; };
 		9C804D511E72FA650031EFEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C804D501E72FA650031EFEF /* Assets.xcassets */; };
 		9C804D541E72FA650031EFEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C804D521E72FA650031EFEF /* LaunchScreen.storyboard */; };
 		9C804D631E7300EA0031EFEF /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C804D621E7300EA0031EFEF /* NotificationService.swift */; };
 		9C804D671E7300EA0031EFEF /* DonaldDumpNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9C804D601E7300EA0031EFEF /* DonaldDumpNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9C804D6D1E7323450031EFEF /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C804D6C1E7323450031EFEF /* SearchTableViewController.swift */; };
+		9C804D6F1E76A6BB0031EFEF /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C804D6E1E76A6BB0031EFEF /* Quote.swift */; };
+		9C804D751E76AE160031EFEF /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C804D741E76AE160031EFEF /* JSONParser.swift */; };
+		9C804D781E76AE710031EFEF /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C804D771E76AE710031EFEF /* MyTableViewCell.swift */; };
+		9C804D7A1E76B9BA0031EFEF /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C804D791E76B9BA0031EFEF /* DataStore.swift */; };
+		9CEF41351E76CE1E0057BD38 /* RandomQuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEF41341E76CE1E0057BD38 /* RandomQuoteViewController.swift */; };
+		9CEF41371E7701E60057BD38 /* CustomNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEF41361E7701E60057BD38 /* CustomNotification.swift */; };
+		9CEF41391E7984200057BD38 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEF41381E7984200057BD38 /* Tag.swift */; };
+		9CEF413B1E79875D0057BD38 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEF413A1E79875D0057BD38 /* config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +58,6 @@
 		78D4FCFB94C92DF9C38648BA /* Pods-DonaldDumpNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DonaldDumpNotificationServiceExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-DonaldDumpNotificationServiceExtension/Pods-DonaldDumpNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 		9C804D461E72FA650031EFEF /* DonaldDump.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DonaldDump.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C804D491E72FA650031EFEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9C804D4B1E72FA650031EFEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9C804D4E1E72FA650031EFEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9C804D501E72FA650031EFEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C804D531E72FA650031EFEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,6 +66,15 @@
 		9C804D601E7300EA0031EFEF /* DonaldDumpNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DonaldDumpNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C804D621E7300EA0031EFEF /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		9C804D641E7300EA0031EFEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C804D6C1E7323450031EFEF /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		9C804D6E1E76A6BB0031EFEF /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		9C804D741E76AE160031EFEF /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
+		9C804D771E76AE710031EFEF /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		9C804D791E76B9BA0031EFEF /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		9CEF41341E76CE1E0057BD38 /* RandomQuoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomQuoteViewController.swift; sourceTree = "<group>"; };
+		9CEF41361E7701E60057BD38 /* CustomNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNotification.swift; sourceTree = "<group>"; };
+		9CEF41381E7984200057BD38 /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		9CEF413A1E79875D0057BD38 /* config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
 		D7056A210827CA9805C1D4AD /* Pods_DonaldDump.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DonaldDump.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -106,7 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				9C804D481E72FA650031EFEF /* DonaldDump */,
-				9C804D611E7300EA0031EFEF /* DonaldDumpNotificationServiceExtension */,
+				9C804D611E7300EA0031EFEF /* NotificationServiceExtension */,
 				9C804D471E72FA650031EFEF /* Products */,
 				72BC10FF09BE61808D57AC41 /* Pods */,
 				21E6DCF716AA9F4CBA6F623C /* Frameworks */,
@@ -127,22 +143,71 @@
 			children = (
 				9C804D5B1E72FE980031EFEF /* DonaldDump.entitlements */,
 				9C804D491E72FA650031EFEF /* AppDelegate.swift */,
-				9C804D4B1E72FA650031EFEF /* ViewController.swift */,
+				9CEF413A1E79875D0057BD38 /* config.swift */,
 				9C804D4D1E72FA650031EFEF /* Main.storyboard */,
-				9C804D501E72FA650031EFEF /* Assets.xcassets */,
-				9C804D521E72FA650031EFEF /* LaunchScreen.storyboard */,
-				9C804D551E72FA650031EFEF /* Info.plist */,
+				9C804D711E76A71A0031EFEF /* Models */,
+				9C804D761E76AE4A0031EFEF /* Views */,
+				9C804D701E76A7020031EFEF /* ViewControllers */,
+				9C804D731E76AB400031EFEF /* Helper */,
+				9C804D721E76A7AA0031EFEF /* Resources */,
 			);
 			path = DonaldDump;
 			sourceTree = "<group>";
 		};
-		9C804D611E7300EA0031EFEF /* DonaldDumpNotificationServiceExtension */ = {
+		9C804D611E7300EA0031EFEF /* NotificationServiceExtension */ = {
 			isa = PBXGroup;
 			children = (
 				9C804D621E7300EA0031EFEF /* NotificationService.swift */,
 				9C804D641E7300EA0031EFEF /* Info.plist */,
 			);
+			name = NotificationServiceExtension;
 			path = DonaldDumpNotificationServiceExtension;
+			sourceTree = "<group>";
+		};
+		9C804D701E76A7020031EFEF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9C804D6C1E7323450031EFEF /* SearchTableViewController.swift */,
+				9CEF41341E76CE1E0057BD38 /* RandomQuoteViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9C804D711E76A71A0031EFEF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9C804D6E1E76A6BB0031EFEF /* Quote.swift */,
+				9CEF41381E7984200057BD38 /* Tag.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		9C804D721E76A7AA0031EFEF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9C804D501E72FA650031EFEF /* Assets.xcassets */,
+				9C804D521E72FA650031EFEF /* LaunchScreen.storyboard */,
+				9C804D551E72FA650031EFEF /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		9C804D731E76AB400031EFEF /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				9C804D741E76AE160031EFEF /* JSONParser.swift */,
+				9C804D791E76B9BA0031EFEF /* DataStore.swift */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		9C804D761E76AE4A0031EFEF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9C804D771E76AE710031EFEF /* MyTableViewCell.swift */,
+				9CEF41361E7701E60057BD38 /* CustomNotification.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,8 +406,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C804D4C1E72FA650031EFEF /* ViewController.swift in Sources */,
+				9CEF41351E76CE1E0057BD38 /* RandomQuoteViewController.swift in Sources */,
+				9C804D6F1E76A6BB0031EFEF /* Quote.swift in Sources */,
+				9C804D751E76AE160031EFEF /* JSONParser.swift in Sources */,
+				9CEF413B1E79875D0057BD38 /* config.swift in Sources */,
+				9C804D6D1E7323450031EFEF /* SearchTableViewController.swift in Sources */,
 				9C804D4A1E72FA650031EFEF /* AppDelegate.swift in Sources */,
+				9CEF41371E7701E60057BD38 /* CustomNotification.swift in Sources */,
+				9CEF41391E7984200057BD38 /* Tag.swift in Sources */,
+				9C804D7A1E76B9BA0031EFEF /* DataStore.swift in Sources */,
+				9C804D781E76AE710031EFEF /* MyTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,6 +636,7 @@
 				9C804D6A1E7300EA0031EFEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
