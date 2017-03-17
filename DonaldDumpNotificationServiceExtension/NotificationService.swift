@@ -15,6 +15,8 @@ class NotificationService: UNNotificationServiceExtension {
     var recievedRequest: UNNotificationRequest!
     var bestAttemptContent: UNMutableNotificationContent?
     
+//    let newContent: [Any?] = ["Daily Dump 💩"]
+    
     override func didReceive(_ request: UNNotificationRequest, withContentHandler contentHandler: @escaping (UNNotificationContent) -> Void) {
         self.recievedRequest = request;
         self.contentHandler = contentHandler
@@ -22,6 +24,8 @@ class NotificationService: UNNotificationServiceExtension {
         
         if let bestAttemptContent = bestAttemptContent {
             OneSignal.didReceiveNotificatioExtensionnRequest(self.recievedRequest, with: self.bestAttemptContent)
+//            bestAttemptContent.title = NSString.localizedUserNotificationString(forKey: "DailyDump", arguments: newContent)
+           //bestAttemptContent.body = "Modified Content"
             contentHandler(bestAttemptContent)
         }
     }

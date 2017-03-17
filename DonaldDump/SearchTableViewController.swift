@@ -27,8 +27,51 @@ class SearchTableViewController: UITableViewController, UISearchResultsUpdating 
         definesPresentationContext = true
         
         tableView.reloadData()
+    }
+ 
+    // MARK: - Table view data source
 
-        //        OneSignal.postNotification( ["contents": ["en": "\(dataStore.quotesArray[0].phrase)"], "include_player_ids": [MY_PLAYER_ID]])
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if shouldUseSearchResult {
+            return dataStore.searchQueryResults.count
+        } else {
+            return dataStore.tagsArray.count
+        }
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        
+        if shouldUseSearchResult {
+            cell.textLabel?.text = dataStore.searchQueryResults[indexPath.row].phrase
+        } else {
+            cell.textLabel?.text = dataStore.tagsArray[indexPath.row].label
+        }
+        
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if searchController.isActive {
+            return "Search Results:"
+        } else {
+            return "Suggestions by tag: "
+        }
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        
+        if let query = searchController.searchBar.text?.lowercased() {
+            parser.loadDataForQuery(query) {
+                self.searchResult = self.dataStore.searchQueryResults.filter { $0.phrase.lowercased().contains(query) }
+                self.dataStore.searchQueryResults = self.searchResult
+                self.tableView.reloadData()
+            }
+        }
     }
     
     var shouldUseSearchResult: Bool {
@@ -40,28 +83,6 @@ class SearchTableViewController: UITableViewController, UISearchResultsUpdating 
         return searchController.isActive
     }
 
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataStore.tagsArray.count //(shouldUseSearchResult ? searchResult : dataStore.tagsArray).count
-    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-       
-        cell.textLabel?.text = dataStore.tagsArray[indexPath.row].label
-
-        return cell
-    }
-    
-    func updateSearchResults(for searchController: UISearchController) {
-
-    }
-
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -69,7 +90,8 @@ class SearchTableViewController: UITableViewController, UISearchResultsUpdating 
         if segue.identifier == "DisplayResults" {
             if let cell = sender as? UITableViewCell,
                 let tag = cell.textLabel!.text {
-                     parser.loadQuoteForTag(tag: tag)
+                dataStore.tagRelatedQuotes = [] 
+                parser.loadQuoteForTag(tag)
             }
         }
     }

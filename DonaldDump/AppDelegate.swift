@@ -18,6 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         OneSignal.initWithLaunchOptions(launchOptions, appId: MY_APP_ID)
+    
+        UISearchBar.appearance().barTintColor = UIColor.barColor()
+        UINavigationBar.appearance().barTintColor = UIColor.barColor()
+        UINavigationBar.appearance().tintColor = UIColor.white
         
         return true
     }
@@ -43,5 +47,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+}
+
+extension UIColor {
+    static func appTheme() -> UIColor {
+        return UIColor(red: 209.0/255.0, green: 225.0/255.0, blue: 246.0/255.0, alpha: 1.0)
+    }
+   
+    static func barColor() -> UIColor {
+        return UIColor(red: 45.0/255.0, green: 160.0/255.0, blue: 160.0/255.0, alpha: 1.0)
+    }
+    
 }
 

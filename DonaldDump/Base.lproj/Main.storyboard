@@ -18,15 +18,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="qPY-Lp-Mio">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="qPY-Lp-Mio">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qPY-Lp-Mio" id="PBy-6e-dY0">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="o5Q-wB-xdT" kind="show" identifier="DisplayResults" id="QSE-xT-Plx"/>
+                                    <segue destination="o5Q-wB-xdT" kind="show" identifier="DisplayResults" id="6Hu-l0-gkU"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -36,12 +36,24 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="5xW-hm-9bL">
+                        <nil key="title"/>
                         <barButtonItem key="backBarButtonItem" title="Back" id="sTI-DM-EsU"/>
+                        <view key="titleView" contentMode="scaleToFill" id="FZa-8m-8JD">
+                            <rect key="frame" x="113" y="6" width="150" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NavigationSearch" translatesAutoresizingMaskIntoConstraints="NO" id="Hma-Cb-wid">
+                                    <rect key="frame" x="-30" y="-9" width="210" height="51"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.1764705882352941" green="0.62745098039215685" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DWn-WF-6OY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3097" y="-179"/>
+            <point key="canvasLocation" x="3096.8000000000002" y="-179.46026986506749"/>
         </scene>
         <!--Display Results Table View Controller-->
         <scene sceneID="dVY-mx-hDu">
@@ -56,7 +68,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bhL-AF-8lD" id="JgR-JZ-vhS">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -69,12 +81,11 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ObF-bt-jrw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4001" y="-182"/>
+            <point key="canvasLocation" x="3954" y="-179"/>
         </scene>
         <!--Random Quote View Controller-->
         <scene sceneID="haG-WN-A1J">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lvj-qi-7SP" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="TQ1-hJ-BMN" customClass="RandomQuoteViewController" customModule="DonaldDump" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oqK-zc-5y9"/>
@@ -84,29 +95,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Press the dump!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8dm-s6-iT8">
-                                <rect key="frame" x="16" y="203" width="343" height="196"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SpeechBubble_iPhone7" translatesAutoresizingMaskIntoConstraints="NO" id="yaa-2M-p3D">
+                                <rect key="frame" x="16" y="72" width="343" height="575"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahQ-yA-r2Z">
-                                <rect key="frame" x="9" y="469" width="350" height="30"/>
+                                <rect key="frame" x="16" y="346" width="343" height="301"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Random Quote"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="getRandomQuote:" destination="TQ1-hJ-BMN" eventType="touchUpInside" id="VlX-UA-tIr"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tronalddump_850x850" translatesAutoresizingMaskIntoConstraints="NO" id="k8k-pH-fET">
-                                <rect key="frame" x="142" y="507" width="91" height="86"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Press the dump!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8dm-s6-iT8">
+                                <rect key="frame" x="40" y="126" width="295" height="212"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.91566621715752161" green="0.99342479944229123" blue="0.98614572165321135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="qeg-Lw-7do">
+                        <nil key="title"/>
+                        <view key="titleView" contentMode="scaleToFill" id="Mx2-6W-Kg3">
+                            <rect key="frame" x="113" y="6" width="150" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Navigation_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="wJ9-EK-ETR">
+                                    <rect key="frame" x="-19" y="-12" width="188" height="45"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.1764705882352941" green="0.62745098039215685" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="zhc-Na-tsT">
                             <connections>
                                 <segue destination="IEm-JU-qwg" kind="show" id="NRT-ZU-IiC"/>
@@ -117,6 +143,7 @@
                         <outlet property="quoteLabel" destination="8dm-s6-iT8" id="08O-sy-uSd"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lvj-qi-7SP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2239.1999999999998" y="-179.46026986506749"/>
         </scene>
@@ -128,6 +155,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dbG-WW-Qng">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -140,6 +168,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="tronalddump_850x850" width="850" height="850"/>
+        <image name="NavigationSearch" width="607" height="90"/>
+        <image name="Navigation_Logo" width="458" height="82"/>
+        <image name="SpeechBubble_iPhone7" width="375" height="667"/>
     </resources>
 </document>

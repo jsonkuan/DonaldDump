@@ -14,7 +14,8 @@ class DataStore: NSObject {
         return instance
     }()
     
+    var searchQueryResults: [Quote] = [] 
+    var tagRelatedQuotes: [Quote] = []
     var quotesArray: [Quote] = []
     var tagsArray: [Tag] = []
-    var tagRelatedQuotes: [Quote] = [] 
 }
