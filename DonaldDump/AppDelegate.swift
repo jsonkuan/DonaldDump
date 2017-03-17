@@ -20,8 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         OneSignal.initWithLaunchOptions(launchOptions, appId: MY_APP_ID)
     
         UISearchBar.appearance().barTintColor = UIColor.barColor()
+        UISearchBar.appearance().tintColor =  UIColor.black
         UINavigationBar.appearance().barTintColor = UIColor.barColor()
-        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().tintColor = UIColor.black
         
         return true
     }

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,14 +19,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="qPY-Lp-Mio">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="qPY-Lp-Mio" customClass="MyTableViewCell" customModule="DonaldDump" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qPY-Lp-Mio" id="PBy-6e-dY0">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ka-4c-adF">
+                                            <rect key="frame" x="16" y="8" width="343" height="27.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="2ka-4c-adF" secondAttribute="bottom" id="DMR-iR-aDy"/>
+                                        <constraint firstItem="2ka-4c-adF" firstAttribute="leading" secondItem="PBy-6e-dY0" secondAttribute="leadingMargin" constant="8" id="djG-RR-oZb"/>
+                                        <constraint firstItem="2ka-4c-adF" firstAttribute="top" secondItem="PBy-6e-dY0" secondAttribute="topMargin" id="pLe-0U-d2G"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="2ka-4c-adF" secondAttribute="trailing" constant="8" id="tac-vm-xfo"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="quoteLabel" destination="2ka-4c-adF" id="nwg-qA-R1F"/>
                                     <segue destination="o5Q-wB-xdT" kind="show" identifier="DisplayResults" id="6Hu-l0-gkU"/>
                                 </connections>
                             </tableViewCell>
@@ -59,18 +75,46 @@
         <scene sceneID="dVY-mx-hDu">
             <objects>
                 <tableViewController id="o5Q-wB-xdT" customClass="DisplayResultsTableViewController" customModule="DonaldDump" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1b7-Qs-9PU">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="56" sectionHeaderHeight="28" sectionFooterHeight="28" id="1b7-Qs-9PU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="bhL-AF-8lD">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResultCell" rowHeight="56" id="bhL-AF-8lD" customClass="MyTableViewCell" customModule="DonaldDump" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="56"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bhL-AF-8lD" id="JgR-JZ-vhS">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgp-WD-rNO">
+                                            <rect key="frame" x="8" y="0.0" width="359" height="27"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Quote" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VoA-KF-jgo">
+                                            <rect key="frame" x="16" y="27" width="343" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="mgp-WD-rNO" firstAttribute="top" secondItem="JgR-JZ-vhS" secondAttribute="top" id="GqV-q9-3Wq"/>
+                                        <constraint firstItem="VoA-KF-jgo" firstAttribute="leading" secondItem="JgR-JZ-vhS" secondAttribute="leadingMargin" constant="8" id="THF-dc-aXY"/>
+                                        <constraint firstItem="VoA-KF-jgo" firstAttribute="bottom" secondItem="JgR-JZ-vhS" secondAttribute="bottomMargin" id="TxZ-gt-vGt"/>
+                                        <constraint firstAttribute="trailing" secondItem="mgp-WD-rNO" secondAttribute="trailing" constant="8" id="YCy-HP-upL"/>
+                                        <constraint firstItem="VoA-KF-jgo" firstAttribute="top" secondItem="mgp-WD-rNO" secondAttribute="bottom" id="ZDs-X5-bgx"/>
+                                        <constraint firstItem="VoA-KF-jgo" firstAttribute="top" secondItem="mgp-WD-rNO" secondAttribute="bottom" id="aLi-39-dhx"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="VoA-KF-jgo" secondAttribute="trailing" constant="8" id="ldc-79-6sM"/>
+                                        <constraint firstItem="mgp-WD-rNO" firstAttribute="leading" secondItem="JgR-JZ-vhS" secondAttribute="leading" constant="8" id="zgG-AX-2IF"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="mgp-WD-rNO" id="ohg-Z5-tLX"/>
+                                    <outlet property="quoteLabel" destination="VoA-KF-jgo" id="wIb-29-fOS"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -81,7 +125,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ObF-bt-jrw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3954" y="-179"/>
+            <point key="canvasLocation" x="3952.8000000000002" y="-179.46026986506749"/>
         </scene>
         <!--Random Quote View Controller-->
         <scene sceneID="haG-WN-A1J">

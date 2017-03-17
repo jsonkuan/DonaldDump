@@ -26,7 +26,8 @@ class SearchTableViewController: UITableViewController, UISearchResultsUpdating 
         tableView.tableHeaderView = searchController.searchBar
         definesPresentationContext = true
         
-        tableView.reloadData()
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 140
     }
  
     // MARK: - Table view data source
@@ -44,14 +45,14 @@ class SearchTableViewController: UITableViewController, UISearchResultsUpdating 
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MyTableViewCell
         
         if shouldUseSearchResult {
-            cell.textLabel?.text = dataStore.searchQueryResults[indexPath.row].phrase
+            cell.quoteLabel?.text = dataStore.searchQueryResults[indexPath.row].phrase
+            cell.dateLabel?.text = dataStore.searchQueryResults[indexPath.row].date
         } else {
-            cell.textLabel?.text = dataStore.tagsArray[indexPath.row].label
+            cell.quoteLabel?.text = dataStore.tagsArray[indexPath.row].label
         }
-        
         return cell
     }
     
@@ -88,8 +89,8 @@ class SearchTableViewController: UITableViewController, UISearchResultsUpdating 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "DisplayResults" {
-            if let cell = sender as? UITableViewCell,
-                let tag = cell.textLabel!.text {
+            if let cell = sender as? MyTableViewCell,
+                let tag = cell.quoteLabel!.text {
                 dataStore.tagRelatedQuotes = [] 
                 parser.loadQuoteForTag(tag)
             }
