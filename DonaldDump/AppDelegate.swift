@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UISearchBar.appearance().barTintColor = UIColor.barColor()
         UISearchBar.appearance().tintColor =  UIColor.black
         UINavigationBar.appearance().barTintColor = UIColor.barColor()
-        UINavigationBar.appearance().tintColor = UIColor.black
+        UINavigationBar.appearance().tintColor = UIColor.white
         
         return true
     }
