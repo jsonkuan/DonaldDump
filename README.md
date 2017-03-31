@@ -1,5 +1,5 @@
-#DonaldnaldDump
-iOS App - Quotes of dumbest things trump said, with push notifications from a OneSignal server. Quotes are parsed from a restful API: [Tronald Dump](https://www.tronalddump.io)
+# DonaldDump
+iOS App - Quotes of dumbest things trump said, with push notifications(The Daily Dump)from a OneSignal server. Quotes are parsed from a restful API: [Tronald Dump](https://www.tronalddump.io)
 
 ## Installation for Push notifications
 
