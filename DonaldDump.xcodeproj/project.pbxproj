@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15684F782019EF090020A117 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15684F772019EF090020A117 /* GradientView.swift */; };
+		159793D4200F56B30001A43C /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159793D3200F56B30001A43C /* config.swift */; };
 		1AB72547AF83F51AC9275C2F /* Pods_DonaldDump.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7056A210827CA9805C1D4AD /* Pods_DonaldDump.framework */; };
 		3EC251E7F259D1BCFBBBC15F /* Pods_DonaldDumpNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D12B6EEED191EE405638C9 /* Pods_DonaldDumpNotificationServiceExtension.framework */; };
 		9C804D4A1E72FA650031EFEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C804D491E72FA650031EFEF /* AppDelegate.swift */; };
@@ -22,7 +24,6 @@
 		9C804D7A1E76B9BA0031EFEF /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C804D791E76B9BA0031EFEF /* DataStore.swift */; };
 		9CEF41351E76CE1E0057BD38 /* RandomQuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEF41341E76CE1E0057BD38 /* RandomQuoteViewController.swift */; };
 		9CEF41391E7984200057BD38 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEF41381E7984200057BD38 /* Tag.swift */; };
-		9CEF413B1E79875D0057BD38 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEF413A1E79875D0057BD38 /* config.swift */; };
 		9CEF413D1E799CDC0057BD38 /* DisplayResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEF413C1E799CDC0057BD38 /* DisplayResultsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		15684F772019EF090020A117 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		159793D3200F56B30001A43C /* config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
 		197698926AD1FE8CEF4E9D8A /* Pods-DonaldDump.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DonaldDump.release.xcconfig"; path = "Pods/Target Support Files/Pods-DonaldDump/Pods-DonaldDump.release.xcconfig"; sourceTree = "<group>"; };
 		43D12B6EEED191EE405638C9 /* Pods_DonaldDumpNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DonaldDumpNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65FD6AFE88EDD6A11CE218FC /* Pods-DonaldDump.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DonaldDump.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DonaldDump/Pods-DonaldDump.debug.xcconfig"; sourceTree = "<group>"; };
@@ -73,7 +76,6 @@
 		9C804D791E76B9BA0031EFEF /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		9CEF41341E76CE1E0057BD38 /* RandomQuoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomQuoteViewController.swift; sourceTree = "<group>"; };
 		9CEF41381E7984200057BD38 /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
-		9CEF413A1E79875D0057BD38 /* config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
 		9CEF413C1E799CDC0057BD38 /* DisplayResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayResultsTableViewController.swift; sourceTree = "<group>"; };
 		D7056A210827CA9805C1D4AD /* Pods_DonaldDump.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DonaldDump.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -143,7 +145,7 @@
 			children = (
 				9C804D5B1E72FE980031EFEF /* DonaldDump.entitlements */,
 				9C804D491E72FA650031EFEF /* AppDelegate.swift */,
-				9CEF413A1E79875D0057BD38 /* config.swift */,
+				159793D3200F56B30001A43C /* config.swift */,
 				9C804D4D1E72FA650031EFEF /* Main.storyboard */,
 				9C804D711E76A71A0031EFEF /* Models */,
 				9C804D761E76AE4A0031EFEF /* Views */,
@@ -198,6 +200,7 @@
 			children = (
 				9C804D741E76AE160031EFEF /* JSONParser.swift */,
 				9C804D791E76B9BA0031EFEF /* DataStore.swift */,
+				15684F772019EF090020A117 /* GradientView.swift */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -261,12 +264,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = jsonkuan;
 				TargetAttributes = {
 					9C804D451E72FA650031EFEF = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = M7X37PRA8F;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -280,6 +284,7 @@
 					9C804D5F1E7300EA0031EFEF = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = M7X37PRA8F;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -408,8 +413,9 @@
 			files = (
 				9CEF41351E76CE1E0057BD38 /* RandomQuoteViewController.swift in Sources */,
 				9C804D6F1E76A6BB0031EFEF /* Quote.swift in Sources */,
+				15684F782019EF090020A117 /* GradientView.swift in Sources */,
 				9C804D751E76AE160031EFEF /* JSONParser.swift in Sources */,
-				9CEF413B1E79875D0057BD38 /* config.swift in Sources */,
+				159793D4200F56B30001A43C /* config.swift in Sources */,
 				9C804D6D1E7323450031EFEF /* SearchTableViewController.swift in Sources */,
 				9C804D4A1E72FA650031EFEF /* AppDelegate.swift in Sources */,
 				9CEF41391E7984200057BD38 /* Tag.swift in Sources */,
@@ -466,7 +472,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -474,10 +482,15 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jason Kuan (HX5Q9T76A7)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -515,7 +528,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -523,7 +538,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -560,7 +579,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jsonkuan.DonaldDump;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -576,7 +596,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jsonkuan.DonaldDump;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -590,7 +611,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jsonkuan.DonaldDump.DonaldDumpNotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -604,7 +626,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jsonkuan.DonaldDump.DonaldDumpNotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

@@ -37,7 +37,7 @@ class JSONParser: NSObject {
                                         if let value = dictionary["value"] as? String,
                                             let date = dictionary["appeared_at"] as? String {
                                             let endIndex = date.index(date.endIndex, offsetBy: -9)
-                                            self.dataStore.searchQueryResults.append(Quote(phrase: value, date:  date.substring(to: endIndex)))
+                                          self.dataStore.searchQueryResults.append(Quote(phrase: value, date: date.substring(to: endIndex)))
                                             closure()
                                         }
                                     }

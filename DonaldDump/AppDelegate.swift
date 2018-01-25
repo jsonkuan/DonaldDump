@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
         UISearchBar.appearance().barTintColor = UIColor.barColor()
         UISearchBar.appearance().tintColor =  UIColor.black
-        UINavigationBar.appearance().barTintColor = UIColor.barColor()
+//        UINavigationBar.appearance().barTintColor = UIColor.barColor()
         UINavigationBar.appearance().tintColor = UIColor.white
         
         return true
@@ -56,7 +56,7 @@ extension UIColor {
     }
    
     static func barColor() -> UIColor {
-        return UIColor(red: 45.0/255.0, green: 160.0/255.0, blue: 160.0/255.0, alpha: 1.0)
+      return UIColor(red: 40.0/255.0, green: 133.0/255.0, blue: 195.0/255.0, alpha: 1.0)
     }
     
 }
